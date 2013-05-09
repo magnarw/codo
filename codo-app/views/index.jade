@@ -1,15 +1,16 @@
-form(method="POST")
-	p Title:
-		input(type="text", name="title")
-	p: button Add
+extends layout
 
-if codoList.length > 0
-	ul
-		each list in codoList
-			li
-				h2= list.title
-			p
-				a(href="/update/#{list._id"}) Update
-				a(hred="/delete/#{list._id"}) Delete
-else
-	p No lists
+block controls
+	h1 Controls
+	a.addButton(href="/new")!= "+"
+
+block content
+	h1= title
+	#new-codo-list
+		block createnew
+	#codolists
+		- each list in codolists
+			div.list
+				div.created_at= list.created_at
+				div.title= list.title 
+				div.name= list.name

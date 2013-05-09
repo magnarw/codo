@@ -5,22 +5,62 @@
 
 var express = require('express')
   , routes = require('./routes')
+  , user = require('./routes/user')
   , http = require('http')
-  , mongo = require('mongodb');
+  , path = require('path')
+  , CodoProvider = require('./codoprovider').CodoProvider;
 
-var app = express(),
-	db = new mongo.Db('codo', new mongo.Server('localhost', 27017)),
-	codoList = db.collection("codolist");
+var app = express();
 
 app.configure(function(){
-	app.use(express.bodyParser());	
+  app.set('port', process.env.PORT || 3000);
+  app.set('views', __dirname + '/views');
+  app.set('view engine', 'jade');
+  app.set('view options', {layout: false});
+  app.use(express.favicon());
+  app.use(express.logger('dev'));
+  app.use(express.bodyParser());
+  app.use(express.methodOverride());
+  app.use(app.router);
+  app.use(require('stylus').middleware(__dirname + '/public'));
+  app.use(express.static(path.join(__dirname, 'public')));
 });
 
-app.get('/', function(req, res){
-  codoList.find().toArray(function (err, docs) {
-  	if (err) throw err;
-  	res.render("index.jade", { codoList: docs });
-  });
- });
+app.configure('development', function(){
+  app.use(express.errorHandler());
+});
 
-http.createServer(app).listen(3000);
+
+var codoProvider= new CodoProvider('localhost', 27017);
+
+//Routes
+
+app.get('/', function(req, res){
+  codoProvider.findAll(function(error, lists){
+      res.render('index', {
+            title: 'CODOLists',
+            codolists:lists
+        });
+  });
+});
+
+app.get('/new', function(req, res) {
+	codoProvider.findAll(function(error, lists){
+      res.render('codolist_new.jade', {
+            title: 'CODOLists',
+            codolists:lists
+        });
+  	});
+});
+
+//save new employee
+app.post('/new', function(req, res){
+    codoProvider.save({
+        title: req.param('title'),
+        name: req.param('name')
+    }, function( error, docs) {
+        res.redirect('/')
+    });
+});
+
+app.listen(3000);
