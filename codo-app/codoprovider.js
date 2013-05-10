@@ -17,12 +17,27 @@ CodoProvider.prototype.getCollection= function(callback) {
   });
 };
 
-//find all employees
-CodoProvider.prototype.findAll = function(callback) {
+//find all codos related to user
+CodoProvider.prototype.findForUser = function(callback) {
     this.getCollection(function(error, codolist_collection) {
       if( error ) callback(error)
       else {
         codolist_collection.find().toArray(function(error, results) {
+          if( error ) callback(error)
+          else callback(null, results)
+        });
+      }
+    });
+};
+
+
+//find all employees
+CodoProvider.prototype.findAll = function(user,callback) {
+    this.getCollection(function(error, codolist_collection) {
+      if( error ) callback(error)
+      else {
+        codolist_collection.find({"collaborators": user}).toArray(function(error, results) {
+           console.log(results);
           if( error ) callback(error)
           else callback(null, results)
         });
@@ -42,7 +57,7 @@ CodoProvider.prototype.save = function(lists, callback) {
           list = lists[i];
           list.created_at = new Date();
         }
-
+        console.log(lists);
         codolist_collection.insert(lists, function() {
           callback(null, lists);
         });
