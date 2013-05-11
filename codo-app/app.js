@@ -25,6 +25,8 @@ app.configure(function(){
   app.use(app.router);
   app.use(require('stylus').middleware(__dirname + '/public'));
   app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.cookieParser());
+  app.use(express.session({secret:'oh, so secret!'}));
 });
 
 app.configure('development', function(){
@@ -37,14 +39,26 @@ var userProvider = new UserProvider('localhost',27017);
 
 
 //Routes
-app.get('/', function(req, res){
+app.get('/', checkAuth, function(req, res){
+  var userId = req.session.user_id 
+  res.redirect('/user/' + userId);
+});
+
+app.get('/login', function(req,res){
+  res.render("login.jade");
+})
+
+
+
+app.get('/user/:userId', function(checkAuth, req, res){
   codoProvider.findAll(function(error, lists){
-      res.render('index', {
-            title: 'CODOLists',
-            codolists:lists
-        });
+    res.render('index', {
+        title: 'CODOLists',
+        codolists:lists
+      });
   });
 });
+
 
 app.get('/new', function(req, res) {
 	codoProvider.findAll(function(error, lists){
@@ -79,8 +93,8 @@ app.post('/login', function (req, res) {
 
 //auth utils 
 function checkAuth(req, res, next) {
-  if (!req.session.user_id) {
-     res.redirect('/');
+  if (req.session === undefined || !req.session.user_id) {
+     res.redirect('/login');
   } else {
     next();
   }

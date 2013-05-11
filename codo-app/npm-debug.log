@@ -1,0 +1,243 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'install', 'nodemon' ]
+2 info using npm@1.2.18
+3 info using node@v0.10.5
+4 verbose node symlink /usr/bin/node
+5 verbose read json /home/magnar/prosjekter/kode/codo/codo-app/package.json
+6 warn package.json application-name@0.0.1 No README.md file found!
+7 verbose read json /home/magnar/prosjekter/kode/codo/codo-app/node_modules/express/package.json
+8 verbose read json /home/magnar/prosjekter/kode/codo/codo-app/node_modules/jade/package.json
+9 verbose read json /home/magnar/prosjekter/kode/codo/codo-app/node_modules/mongodb/package.json
+10 verbose read json /home/magnar/prosjekter/kode/codo/codo-app/node_modules/nodemon/package.json
+11 verbose from cache /home/magnar/prosjekter/kode/codo/codo-app/package.json
+12 verbose readDependencies using package.json deps
+13 verbose cache add [ 'nodemon@*', null ]
+14 verbose cache add name=undefined spec="nodemon@*" args=["nodemon@*",null]
+15 verbose parsed url { protocol: null,
+15 verbose parsed url   slashes: null,
+15 verbose parsed url   auth: null,
+15 verbose parsed url   host: null,
+15 verbose parsed url   port: null,
+15 verbose parsed url   hostname: null,
+15 verbose parsed url   hash: null,
+15 verbose parsed url   search: null,
+15 verbose parsed url   query: null,
+15 verbose parsed url   pathname: 'nodemon@*',
+15 verbose parsed url   path: 'nodemon@*',
+15 verbose parsed url   href: 'nodemon@*' }
+16 verbose cache add name="nodemon" spec="*" args=["nodemon","*"]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: '*',
+17 verbose parsed url   path: '*',
+17 verbose parsed url   href: '*' }
+18 verbose addNamed [ 'nodemon', '*' ]
+19 verbose addNamed [ null, '' ]
+20 silly lockFile fbeb9aa5-nodemon nodemon@*
+21 verbose lock nodemon@* /home/magnar/.npm/fbeb9aa5-nodemon.lock
+22 silly addNameRange { name: 'nodemon', range: '', hasData: false }
+23 verbose url raw nodemon
+24 verbose url resolving [ 'https://registry.npmjs.org/', './nodemon' ]
+25 verbose url resolved https://registry.npmjs.org/nodemon
+26 info trying registry request attempt 1 at 17:19:35
+27 http GET https://registry.npmjs.org/nodemon
+28 http 200 https://registry.npmjs.org/nodemon
+29 silly registry.get cb [ 200,
+29 silly registry.get   { vary: 'Accept',
+29 silly registry.get     server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+29 silly registry.get     etag: '"AL80E9SCBN7A8J8LD1MCJBDHI"',
+29 silly registry.get     date: 'Thu, 09 May 2013 15:19:58 GMT',
+29 silly registry.get     'content-type': 'application/json',
+29 silly registry.get     'content-length': '284755' } ]
+30 silly addNameRange number 2 { name: 'nodemon', range: '', hasData: true }
+31 silly addNameRange versions [ 'nodemon',
+31 silly addNameRange   [ '0.1.4',
+31 silly addNameRange     '0.1.5',
+31 silly addNameRange     '0.1.6',
+31 silly addNameRange     '0.1.7',
+31 silly addNameRange     '0.1.8',
+31 silly addNameRange     '0.2.0',
+31 silly addNameRange     '0.2.1',
+31 silly addNameRange     '0.2.2',
+31 silly addNameRange     '0.3.0',
+31 silly addNameRange     '0.3.1',
+31 silly addNameRange     '0.3.2',
+31 silly addNameRange     '0.4.0',
+31 silly addNameRange     '0.4.1',
+31 silly addNameRange     '0.5.0',
+31 silly addNameRange     '0.5.1',
+31 silly addNameRange     '0.5.2',
+31 silly addNameRange     '0.5.3',
+31 silly addNameRange     '0.5.4',
+31 silly addNameRange     '0.5.5',
+31 silly addNameRange     '0.5.6',
+31 silly addNameRange     '0.5.7',
+31 silly addNameRange     '0.6.0',
+31 silly addNameRange     '0.6.1',
+31 silly addNameRange     '0.6.2',
+31 silly addNameRange     '0.6.3',
+31 silly addNameRange     '0.6.4',
+31 silly addNameRange     '0.6.5',
+31 silly addNameRange     '0.6.6',
+31 silly addNameRange     '0.6.7',
+31 silly addNameRange     '0.6.8',
+31 silly addNameRange     '0.6.9',
+31 silly addNameRange     '0.6.10',
+31 silly addNameRange     '0.6.10a',
+31 silly addNameRange     '0.6.11',
+31 silly addNameRange     '0.6.12',
+31 silly addNameRange     '0.6.13',
+31 silly addNameRange     '0.6.14',
+31 silly addNameRange     '0.6.15',
+31 silly addNameRange     '0.6.16',
+31 silly addNameRange     '0.6.17',
+31 silly addNameRange     '0.6.18',
+31 silly addNameRange     '0.6.19',
+31 silly addNameRange     '0.6.20',
+31 silly addNameRange     '0.6.21',
+31 silly addNameRange     '0.6.22',
+31 silly addNameRange     '0.6.23',
+31 silly addNameRange     '0.7.0',
+31 silly addNameRange     '0.7.1',
+31 silly addNameRange     '0.7.2',
+31 silly addNameRange     '0.7.3',
+31 silly addNameRange     '0.7.4',
+31 silly addNameRange     '0.7.5',
+31 silly addNameRange     '0.7.6',
+31 silly addNameRange     '0.7.7',
+31 silly addNameRange     '0.7.8' ] ]
+32 verbose addNamed [ 'nodemon', '0.7.8' ]
+33 verbose addNamed [ '0.7.8', '0.7.8' ]
+34 silly lockFile 197e3f4d-nodemon-0-7-8 nodemon@0.7.8
+35 verbose lock nodemon@0.7.8 /home/magnar/.npm/197e3f4d-nodemon-0-7-8.lock
+36 silly lockFile 484dd191-js-org-nodemon-nodemon-0-7-8-tgz https://registry.npmjs.org/nodemon/-/nodemon-0.7.8.tgz
+37 verbose lock https://registry.npmjs.org/nodemon/-/nodemon-0.7.8.tgz /home/magnar/.npm/484dd191-js-org-nodemon-nodemon-0-7-8-tgz.lock
+38 verbose addRemoteTarball [ 'https://registry.npmjs.org/nodemon/-/nodemon-0.7.8.tgz',
+38 verbose addRemoteTarball   'c0667a000f208dbf6a4dad08a5186595a9889590' ]
+39 info retry fetch attempt 1 at 17:20:04
+40 verbose fetch to= /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/tmp.tgz
+41 http GET https://registry.npmjs.org/nodemon/-/nodemon-0.7.8.tgz
+42 http 200 https://registry.npmjs.org/nodemon/-/nodemon-0.7.8.tgz
+43 silly shasum updated bytes 12309
+44 info shasum c0667a000f208dbf6a4dad08a5186595a9889590
+44 info shasum /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/tmp.tgz
+45 verbose tar unpack /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/tmp.tgz
+46 silly lockFile 819d28d4-804415-0-820289786439389-package /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/package
+47 verbose lock /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/package /home/magnar/.npm/819d28d4-804415-0-820289786439389-package.lock
+48 silly lockFile b049014e-804415-0-820289786439389-tmp-tgz /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/tmp.tgz
+49 verbose lock /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/tmp.tgz /home/magnar/.npm/b049014e-804415-0-820289786439389-tmp-tgz.lock
+50 silly gunzTarPerm modes [ '755', '644' ]
+51 silly gunzTarPerm extractEntry package.json
+52 silly gunzTarPerm extractEntry .npmignore
+53 silly gunzTarPerm extractEntry README.md
+54 silly gunzTarPerm extractEntry nodemon.js
+55 silly gunzTarPerm extractEntry faq.md
+56 silly gunzTarPerm extractEntry nodemonignore.example
+57 verbose read json /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/package/package.json
+58 silly lockFile 819d28d4-804415-0-820289786439389-package /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/package
+59 silly lockFile 819d28d4-804415-0-820289786439389-package /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/package
+60 silly lockFile b049014e-804415-0-820289786439389-tmp-tgz /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/tmp.tgz
+61 silly lockFile b049014e-804415-0-820289786439389-tmp-tgz /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/tmp.tgz
+62 verbose from cache /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/package/package.json
+63 verbose tar pack [ '/home/magnar/.npm/nodemon/0.7.8/package.tgz',
+63 verbose tar pack   '/home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/package' ]
+64 verbose tarball /home/magnar/.npm/nodemon/0.7.8/package.tgz
+65 verbose folder /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/package
+66 silly lockFile 819d28d4-804415-0-820289786439389-package /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/package
+67 verbose lock /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/package /home/magnar/.npm/819d28d4-804415-0-820289786439389-package.lock
+68 silly lockFile da3ba2fa-ar-npm-nodemon-0-7-8-package-tgz /home/magnar/.npm/nodemon/0.7.8/package.tgz
+69 verbose lock /home/magnar/.npm/nodemon/0.7.8/package.tgz /home/magnar/.npm/da3ba2fa-ar-npm-nodemon-0-7-8-package-tgz.lock
+70 silly lockFile 819d28d4-804415-0-820289786439389-package /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/package
+71 silly lockFile 819d28d4-804415-0-820289786439389-package /home/magnar/tmp/npm-5512/1368112804415-0.820289786439389/package
+72 silly lockFile da3ba2fa-ar-npm-nodemon-0-7-8-package-tgz /home/magnar/.npm/nodemon/0.7.8/package.tgz
+73 silly lockFile da3ba2fa-ar-npm-nodemon-0-7-8-package-tgz /home/magnar/.npm/nodemon/0.7.8/package.tgz
+74 silly lockFile 5d12e661-magnar-npm-nodemon-0-7-8-package /home/magnar/.npm/nodemon/0.7.8/package
+75 verbose lock /home/magnar/.npm/nodemon/0.7.8/package /home/magnar/.npm/5d12e661-magnar-npm-nodemon-0-7-8-package.lock
+76 silly lockFile 5d12e661-magnar-npm-nodemon-0-7-8-package /home/magnar/.npm/nodemon/0.7.8/package
+77 silly lockFile 5d12e661-magnar-npm-nodemon-0-7-8-package /home/magnar/.npm/nodemon/0.7.8/package
+78 verbose tar unpack /home/magnar/.npm/nodemon/0.7.8/package.tgz
+79 silly lockFile 5d12e661-magnar-npm-nodemon-0-7-8-package /home/magnar/.npm/nodemon/0.7.8/package
+80 verbose lock /home/magnar/.npm/nodemon/0.7.8/package /home/magnar/.npm/5d12e661-magnar-npm-nodemon-0-7-8-package.lock
+81 silly lockFile da3ba2fa-ar-npm-nodemon-0-7-8-package-tgz /home/magnar/.npm/nodemon/0.7.8/package.tgz
+82 verbose lock /home/magnar/.npm/nodemon/0.7.8/package.tgz /home/magnar/.npm/da3ba2fa-ar-npm-nodemon-0-7-8-package-tgz.lock
+83 silly gunzTarPerm modes [ '755', '644' ]
+84 silly gunzTarPerm extractEntry package.json
+85 silly gunzTarPerm extractEntry .npmignore
+86 silly gunzTarPerm extractEntry README.md
+87 silly gunzTarPerm extractEntry nodemon.js
+88 silly gunzTarPerm extractEntry faq.md
+89 silly gunzTarPerm extractEntry nodemonignore.example
+90 verbose read json /home/magnar/.npm/nodemon/0.7.8/package/package.json
+91 silly lockFile 5d12e661-magnar-npm-nodemon-0-7-8-package /home/magnar/.npm/nodemon/0.7.8/package
+92 silly lockFile 5d12e661-magnar-npm-nodemon-0-7-8-package /home/magnar/.npm/nodemon/0.7.8/package
+93 silly lockFile da3ba2fa-ar-npm-nodemon-0-7-8-package-tgz /home/magnar/.npm/nodemon/0.7.8/package.tgz
+94 silly lockFile da3ba2fa-ar-npm-nodemon-0-7-8-package-tgz /home/magnar/.npm/nodemon/0.7.8/package.tgz
+95 silly shasum updated bytes 12306
+96 info shasum ea77437d1bb53aaef2b453c3af97c37a20bd34d0
+96 info shasum /home/magnar/.npm/nodemon/0.7.8/package.tgz
+97 verbose from cache /home/magnar/.npm/nodemon/0.7.8/package/package.json
+98 verbose chmod /home/magnar/.npm/nodemon/0.7.8/package.tgz 644
+99 verbose chown /home/magnar/.npm/nodemon/0.7.8/package.tgz [ 1000, 1000 ]
+100 silly lockFile 484dd191-js-org-nodemon-nodemon-0-7-8-tgz https://registry.npmjs.org/nodemon/-/nodemon-0.7.8.tgz
+101 silly lockFile 484dd191-js-org-nodemon-nodemon-0-7-8-tgz https://registry.npmjs.org/nodemon/-/nodemon-0.7.8.tgz
+102 silly lockFile 197e3f4d-nodemon-0-7-8 nodemon@0.7.8
+103 silly lockFile 197e3f4d-nodemon-0-7-8 nodemon@0.7.8
+104 silly lockFile fbeb9aa5-nodemon nodemon@*
+105 silly lockFile fbeb9aa5-nodemon nodemon@*
+106 silly resolved [ { name: 'nodemon',
+106 silly resolved     homepage: 'http://github.com/remy/nodemon',
+106 silly resolved     author: { name: 'Remy Sharp', url: 'http://github.com/remy' },
+106 silly resolved     bin: { nodemon: './nodemon.js' },
+106 silly resolved     repository: { type: 'git', url: 'http://github.com/remy/nodemon.git' },
+106 silly resolved     description: 'Simple monitor script for use during development of a node.js app.',
+106 silly resolved     keywords:
+106 silly resolved      [ 'monitor',
+106 silly resolved        'development',
+106 silly resolved        'restart',
+106 silly resolved        'autoload',
+106 silly resolved        'reload',
+106 silly resolved        'terminal' ],
+106 silly resolved     version: '0.7.8',
+106 silly resolved     preferGlobal: 'true',
+106 silly resolved     licenses: [ [Object] ],
+106 silly resolved     main: './nodemon',
+106 silly resolved     readme: '# nodemon\n\nFor use during development of a node.js based application. \n\nnodemon will watch the files in the directory that nodemon was started, and if they change, it will automatically restart your node application.\n\nnodemon does **not** require *any* changes to your code or method of development. nodemon simply wraps your node application and keeps an eye on any files that have changed. Remember that nodemon is a replacement wrapper for `node`, think of it as replacing the word "node" on the command line when you run your script.\n\n# Installation\n\nEither through forking or by using [npm](http://npmjs.org) (the recommended way):\n\n    npm install -g nodemon\n\nAnd nodemon will be installed in to your bin path. Note that as of npm v1, you must explicitly tell npm to install globally as nodemon is a command line utility.\n\n# Usage\n\nnodemon wraps your application, so you can pass all the arguments you would normally pass to your app:\n\n    nodemon [your node app]\n\nFor example, if my application accepted a host and port as the arguments, I would start it as so:\n\n    nodemon ./server.js localhost 8080\n\nAny output from this script is prefixed with `[nodemon]`, otherwise all output from your application, errors included, will be echoed out as expected.\n\nnodemon also supports running and monitoring [coffee-script](http://jashkenas.github.com/coffee-script/) apps:\n\n    nodemon server.coffee\n\nIf no script is given, nodemon will test for a `package.json` file and if found, will run the file associated with the *main* property ([ref](https://github.com/remy/nodemon/issues/14)).\n\nYou can also pass the debug flag to node through the command line as you would normally:\n\n    nodemon --debug ./server.js 80\n\nIf you have a `package.json` file for your app, you can omit the main script entirely and nodemon will read the `package.json` for the `main` property and use that value as the app.\n\n# Automatic re-running\n\nnodemon was original written to restart hanging processes such as web servers, but now supports apps that cleanly exit. If your script exits cleanly, nodemon will continue to monitor the directory (or directories) and restart the script if there are any changes.\n\n# Manual restarting\n\nWhilst nodemon is running, if you need to manually restart your application, instead of stopping and restart nodemon, you can simply type `rs` with a carridge return, and nodemon will restart your process.\n\n# Running non-node scripts\n\nnodemon can also be used to execute and monitor other programs. nodemon will read the file extension of the script being run and monitor that extension instead of .js if there\'s no .nodemonignore:\n\n    nodemon --exec "python -v" ./app.py\n\nNow nodemon will run `app.py` with python in verbose mode (note that if you\'re not passing args to the exec program, you don\'t need the quotes), and look for new or modified files with the `.py` extension.\n\n# Monitoring multiple directories\n\nBy default nodemon monitors the current working directory. If you want to take control of that option, use the `--watch` option to add specific paths:\n\n    nodemon --watch app --watch libs app/server.js\n\nNow nodemon will only restart if there are changes in the `./app` or `./libs` directory. By default nodemon will traverse sub-directories, so there\'s no need in explicitly including sub-directories.\n\n# Specifying extension watch list\n\nBy default, nodemon looks for files with the `.js` extension. If you use the `--exec` option and monitor `app.py` nodemon will monitor files with the extension of `.py`. However, you can specify your own list with the `-e` switch like so:\n\n    nodemon -e js,css,html\n\nOr with alternative syntax:\n\n    nodemon --ext \'.js|.css|.html\'\n\nNow nodemon will restart on any changes to files in the directory (or subdirectories) with the extensions .js, .css or .html.\n\n# Delaying restarting\n\nIn some situations, you may want to wait until a number of files have changed. The timeout before checking for new file changes is 1 second. If you\'re uploading a number of files and it\'s taking some number of seconds, this could cause your app to restart multiple time unnecessarily.\n\nTo add an extra throttle, or delay restarting, use the `--delay` command:\n\n    nodemon --delay 10 server.js\n\nThe delay figure is number of seconds to delay before restarting. So nodemon will only restart your app the given number of seconds after the *last* file change.\n\n# Ignoring files\n\nBy default, if nodemon will only restart when a `.js` JavaScript file changes.  In some cases you will want to ignore some specific files, directories or file patterns, to prevent nodemon from prematurely restarting your application.\n\nYou can use the [example ignore file](http://github.com/remy/nodemon/blob/master/nodemonignore.example) (note that this example file is not hidden - you must rename it to `.nodemonignore`) as a basis for your nodemon, but it\'s very simple to create your own:\n\n    # this is my ignore file with a nice comment at the top\n    \n    /vendor/*     # ignore all external submodules\n    /public/*     # static files\n    ./README.md   # a specific file\n    *.css         # ignore any CSS files too\n    :(\\d)*\\.js    # monitor javascript files with only digits in their name\n\nThe ignore file accepts:\n\n* Comments starting with a `#` symbol\n* Blank lines\n* Specific files\n* File patterns (this is converted to a regex, so you have full control of the pattern)\n* Unescaped regex\'s begining with `:`.\n\n**Note** the `.nodemonignore` file is read from the directory you run nodemon from, *not* from the location of the node script you\'re running.\n\n# Controlling shutdown of your script\n\nnodemon sends a kill signal to your application when it sees a file update. If you need to clean up on shutdown inside your script you can capture the kill signal and handle it yourself.\n\nThe following example will listen once for the `SIGUSR2` signal (used by nodemon to restart), run the clean up process and then kill itself for nodemon to continue control:\n\n    process.once(\'SIGUSR2\', function () {\n      gracefulShutdown(function () {\n        process.kill(process.pid, \'SIGUSR2\'); \n      })\n    });\n\nNote that the `process.kill` is *only* called once your shutdown jobs are complete. Hat tip to [Benjie Gillam](http://www.benjiegillam.com/2011/08/node-js-clean-restart-and-faster-development-with-nodemon/) for writing technique this up.\n\n# Help! My changes aren\'t being detected!\n\nnodemon has three potential methods it uses to look for file changes. First, it polls using the find command to search for files modified within the last second. This method works on systems with a BSD based find (Mac, for example). \n\nNext it tries using node\'s `fs.watch`. `fs.watch` will not always work however, and nodemon will try and detect if this is the case by writing a file to the tmp directory and seeing if fs.watch is triggered when it\'s removed. If nodemon finds that fs.watch was not triggered, it will then fall back to the third method (called legacy watch), which works by statting each file in your working directory looking for changes to the last modified time. This is the most cpu intensive method, but it may be the only option on some systems.\n\nIn certain cases, like when where you are working on a different drive than your tmp directory is on, `fs.watch` may give you a false positive. You can force nodemon to start using the most compatible legacy method by passing the -L switch, e.g. `nodemon -L /my/odd/file.js`.\n\n# License\n\nMIT [http://rem.mit-license.org](http://rem.mit-license.org)\n',
+106 silly resolved     readmeFilename: 'README.md',
+106 silly resolved     _id: 'nodemon@0.7.8',
+106 silly resolved     dist: { shasum: 'ea77437d1bb53aaef2b453c3af97c37a20bd34d0' },
+106 silly resolved     _from: 'nodemon@*',
+106 silly resolved     _resolved: 'https://registry.npmjs.org/nodemon/-/nodemon-0.7.8.tgz' } ]
+107 info install nodemon@0.7.8 into /home/magnar/prosjekter/kode/codo/codo-app
+108 info installOne nodemon@0.7.8
+109 verbose from cache /home/magnar/.npm/nodemon/0.7.8/package/package.json
+110 info /home/magnar/prosjekter/kode/codo/codo-app/node_modules/nodemon unbuild
+111 verbose from cache /home/magnar/prosjekter/kode/codo/codo-app/node_modules/nodemon/package.json
+112 info preuninstall nodemon@0.7.8
+113 info uninstall nodemon@0.7.8
+114 verbose true,/home/magnar/prosjekter/kode/codo/codo-app/node_modules,/home/magnar/prosjekter/kode/codo/codo-app/node_modules unbuild nodemon@0.7.8
+115 verbose /home/magnar/prosjekter/kode/codo/codo-app/node_modules/.bin,[object Object] binRoot
+116 info /home/magnar/prosjekter/kode/codo/codo-app/node_modules/nodemon unbuild
+117 verbose read json /home/magnar/prosjekter/kode/codo/codo-app/node_modules/nodemon/package.json
+118 info preuninstall nodemon@0.7.8
+119 info uninstall nodemon@0.7.8
+120 verbose true,/home/magnar/prosjekter/kode/codo/codo-app/node_modules,/home/magnar/prosjekter/kode/codo/codo-app/node_modules unbuild nodemon@0.7.8
+121 verbose /home/magnar/prosjekter/kode/codo/codo-app/node_modules/.bin,[object Object] binRoot
+122 info postuninstall nodemon@0.7.8
+123 error Refusing to delete: /home/magnar/prosjekter/kode/codo/codo-app/node_modules/.bin/nodemon not in /home/magnar/prosjekter/kode/codo/codo-app/node_modules/nodemon
+File exists: /home/magnar/prosjekter/kode/codo/codo-app/node_modules/.bin/nodemon
+Move it away, and try again.
+124 error System Linux 3.2.0-40-generic
+125 error command "/usr/bin/node" "/usr/bin/npm" "install" "nodemon"
+126 error cwd /home/magnar/prosjekter/kode/codo/codo-app
+127 error node -v v0.10.5
+128 error npm -v 1.2.18
+129 error path /home/magnar/prosjekter/kode/codo/codo-app/node_modules/.bin/nodemon
+130 error code EEXIST
+131 verbose exit [ 1, true ]
