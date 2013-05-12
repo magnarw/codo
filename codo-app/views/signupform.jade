@@ -1,0 +1,11 @@
+#account-form-container
+	form( method="post",action="/signup")#account-form.form-horizontal.well.span6
+		h1
+		p#sub1.subheading Sign up!
+		hr
+		label Username 
+		input(type="text", name="newuser", id='new-user-tf').span4.required
+		label Password
+		input(type="password", name="newpassword", id='new-pass-tf').span4.required
+		button(type="submit")#btn-login.btn.btn-primary
+			| Sign up!

@@ -26,8 +26,10 @@ app.configure(function(){
   app.use(require('stylus').middleware(__dirname + '/public'));
   app.use(express.static(path.join(__dirname, 'public')));
   app.use(express.cookieParser());
-  app.use(express.session({secret:'oh, so secret!'}));
+  app.use(express.session({secret: 'alessios'}));
 });
+
+
 
 app.configure('development', function(){
   app.use(express.errorHandler());
@@ -45,7 +47,7 @@ app.get('/', checkAuth, function(req, res){
 });
 
 app.get('/login', function(req,res){
-  res.render("login.jade");
+  res.render("signup.jade");
 })
 
 
@@ -82,18 +84,44 @@ app.post('/new', function(req, res){
 //login 
 app.post('/login', function (req, res) {
   var post = req.body;
-  if (post.user == 'john' && post.password == 'johnspassword') {
-    req.session.user_id = johns_user_id_here;
-    res.redirect('/my_secret_page');
-  } else {
-    res.send('Bad user/pass');
-  }
+  userProvider.find(post.user, function (error, user){
+    console.log("Dette er bruker:" + user.username);
+    var userObject = user[0];
+    console.log("Dette er userobject:" + userObject);
+    if(userObject.password == post.password){
+      // Regenerate session when signing in
+      // to prevent fixation 
+      req.session.regenerate(function(){
+        // Store the user's primary key 
+        // in the session store to be retrieved,
+        // or in this case the entire user object
+        req.session.user = userObject._id;
+        req.session.success = 'Authenticated as ' + user.name
+          + ' click to <a href="/logout">logout</a>. '
+          + ' You may now access <a href="/restricted">/restricted</a>.';
+        res.redirect('/');
+      });
+    }else {
+        res.send('Bad user/pass');
+    }})
+});
+
+
+//signup 
+app.post('/signup', function (req, res) {
+  var post = req.body;
+  console.log("dette er brukernavn" + post.newuser);
+  var newUser = {"username":post.newuser, "password":post.newpassword}; 
+  console.log("Dette er bruker:" + newUser.username);
+  userProvider.save(newUser, function( error, docs) {
+        res.redirect('/')
+    });
 });
 
 
 //auth utils 
 function checkAuth(req, res, next) {
-  if (req.session === undefined || !req.session.user_id) {
+  if (req.session === undefined || !req.session.user) {
      res.redirect('/login');
   } else {
     next();
