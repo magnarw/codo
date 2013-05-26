@@ -1,16 +1,3 @@
-extends layout
+heextends layout
+p Hello world
 
-block controls
-	h1 Controls
-	a.addButton(href="/new")!= "+"
-
-block content
-	h1= title
-	#new-codo-list
-		block createnew
-	#codolists
-		- each list in codolists
-			div.list
-				div.created_at= list.created_at
-				div.title= list.title 
-				div.name= list.name

@@ -9,7 +9,7 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , UserProvider = require('./userprovider').UserProvider
-  , CodoProvider = require('./codoprovider').CodoProvider;
+  , CodoProvider = require('./codoprovider').CodoProvider
 
 var app = express();
 
@@ -22,14 +22,16 @@ app.configure(function(){
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
-  app.use(app.router);
-  app.use(require('stylus').middleware(__dirname + '/public'));
+ 
   app.use(express.static(path.join(__dirname, 'public')));
-  app.use(express.cookieParser());
-  app.use(express.session({secret: 'alessios'}));
+
+ // app.use(require('stylus').middleware(__dirname + '/public'));
+  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(express.bodyParser());
+  app.use(express.cookieParser('shhhh, very secret'));
+  app.use(express.session());
+   app.use(app.router);
 });
-
-
 
 app.configure('development', function(){
   app.use(express.errorHandler());
@@ -42,23 +44,19 @@ var userProvider = new UserProvider('localhost',27017);
 
 //Routes
 app.get('/', checkAuth, function(req, res){
+  console.log("dette er session: " + req.session);
   var userId = req.session.user_id 
   res.redirect('/user/' + userId);
 });
 
 app.get('/login', function(req,res){
-  res.render("signup.jade");
+  res.render("landing.jade");
 })
 
 
 
-app.get('/user/:userId', function(checkAuth, req, res){
-  codoProvider.findAll(function(error, lists){
-    res.render('index', {
-        title: 'CODOLists',
-        codolists:lists
-      });
-  });
+app.get('/user/:userId', checkAuth,function(req, res){
+  res.render("index.jade");
 });
 
 
@@ -96,6 +94,7 @@ app.post('/login', function (req, res) {
         // in the session store to be retrieved,
         // or in this case the entire user object
         req.session.user = userObject._id;
+        req.session.user_id = userObject._id;
         req.session.success = 'Authenticated as ' + user.name
           + ' click to <a href="/logout">logout</a>. '
           + ' You may now access <a href="/restricted">/restricted</a>.';
